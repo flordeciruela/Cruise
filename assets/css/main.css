@@ -44,3 +44,8 @@ margin: 4px 25px;
 }
 
 /*App */
+
+#container {
+ margin: 0 auto;
+ width: 100%; /* Ancho del contenedor */
+}
