@@ -4,6 +4,10 @@ body {
     font-family: ;
 }
 
+* {
+font-family: "Open Sans","Microsoft YaHei","Hiragino Sans GB","Hiragino Sans GB W3","微软雅黑","Helvetica Neue",Arial,sans-serif;
+}
+
 .logo {
   height: 40%;
   width: 40%;
@@ -17,7 +21,7 @@ margin: 0px -7px;
 }
 
 .error_menssage {
-color: white;
+color: #333;
 font-size: 11px;
 font-family: "Open Sans","Microsoft YaHei","Hiragino Sans GB","Hiragino Sans GB W3","微软雅黑","Helvetica Neue",Arial,sans-serif;
 margin: 0px 25px;
@@ -44,8 +48,95 @@ margin: 4px 25px;
 }
 
 /*App */
+header {
+float: right;
+}
 
 #container {
  margin: 0 auto;
  width: 100%; /* Ancho del contenedor */
+}
+
+#container input {
+ height: 1.50em;
+ visibility: hidden;
+}
+#container label {
+ background: #f9f9f9; /* Fondo de las pestañas */
+ border-radius: .50em .50em 0 0;
+ color: #888; /* Color del texto de las pestañas */
+ cursor: pointer;
+ display: block;
+ float: right;
+ font-size: .75em; /* Tamaño del texto de las pestañas */
+ height: 2.5em;
+ line-height: 2.5em;
+ margin-right: .25em;
+ padding: 0 1.5em;
+ text-align: center;
+}
+#container input:hover + label {
+ background: #ddd; /* Fondo de las pestañas al pasar el cursor por encima */
+ color: #666; /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+#container input:checked + label {
+ background: #f1f1f1; /* Fondo de las pestañas al presionar */
+ color: #444; /* Color de las pestañas al presionar */
+ position: relative;
+ z-index: 6;
+}
+#content {
+ background: #f1f1f1; /* Fondo del contenido */
+ border-radius: 0 .25em .25em .25em;
+ min-height: 20em; /* Alto del contenido */
+ position: relative;
+ width: 100%;
+ z-index: 5;
+}
+#content .containers {
+ opacity: 0;
+ padding: 1.5em;
+ position: absolute;
+ z-index: -100;
+}
+
+#content_dashboard p {
+ float: left;
+ width: 48.5%;
+}
+#content_dashboard p.column-right {
+ margin-left: 3%;
+}
+#content_dashboard p img {
+ display: block;
+ margin: 0 auto 1em auto;
+}
+#content_my-cruise p,
+#content_my-cruise ul {
+ margin-bottom: 1em;
+}
+#content_my-cruise ul {
+ margin-left: 2em;
+}
+#container input#tab1:checked ~ #content #content_help,
+#container input#tab2:checked ~ #content #content_agents,
+#container input#tab3:checked ~ #content #content_my-cruise,
+#container input#tab4:checked ~ #content #content_dashboard {
+ opacity: 1;
+ z-index: 100;
+}
+
+#left {
+float: left;
+text-align:left;
+margin-right:1em;
+padding-right:1em;
+}
+
+#right {
+float: left;
+text-align:left;
+margin-bottom: 5em
+margin-left:42em;
+padding-left:1em;
 }

@@ -8,31 +8,51 @@
   <body>
       <header>
           Signed in as
-          <a href="#" id="user_link">Member</a>
+          <a href="#" id="member">user1</a>
           <a href="#" id="logout">Sign out</a>
       </header>
       <h1>Cruise</h1>
 
       <section id="container">
-              <input id="tab1" type="radio" name="tab-group" checked="checked" />
-              <label for="tab1">AGENTS</label>
-              <input id="tab2" type="radio" name="tab-group" />
-              <label for="tab2">DASHBOARD</label>
+              <input id="tab1" type="radio" name="tab-group" />
+              <label for="tab1">HELP</label>
+              <input id="tab2" type="radio" name="tab-group" checked="checked"/>
+              <label for="tab2">AGENTS</label>
               <input id="tab3" type="radio" name="tab-group" />
               <label for="tab3">MY CRUISE</label>
               <input id="tab4" type="radio" name="tab-group" />
-              <label for="tab4">HELP</label>
+              <label for="tab4">DASHBOARD</label>
 
-              <div class="" id="content">
+              <div class="tab" id="content">
                   <div class="containers" id="content_dashboard">
                       <p>Dashboard content.</p>
                   </div>
                   <div class="containers" id="content_my-cruise">
                       <p>My cruise content.</p>
                   </div>
+
                   <div class="containers" id="content_agents">
+                        <div class="b">
+                          <span class="buttons">AGENTS</span>
+                          <button class="agent" id="all">All</button>
+                          <button class="agent" id="physical">Physical</button>
+                          <button class="agent" id="virtual">Virtual</button>
+                        </div>
+
+                        <section>
+                            <div id="all_content" class="all">
+                              <p>All content.</p>
+                            </div>
+                            <div id="physical_content" class="physical">
+                              <p>Physical content.</p>
+                            </div>
+                            <div id="virtual-content" class="virtual">
+                              <p>Virtual content.</p>
+                            </div>
+                        </section>
 
                   </div>
+
                   <div class="containers" id="content_help">
                       <p>Help content.</p>
                   </div>
